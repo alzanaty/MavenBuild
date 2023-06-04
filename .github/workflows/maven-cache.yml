@@ -1,13 +1,13 @@
 name: Docker image Build Process
 
-on:
+on: [push]
   workflow_dispatch:
   workflow_call:
 
 jobs:
   docker:
     env:
-     appName: "springboot-image"
+      appName: "springboot-image"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
